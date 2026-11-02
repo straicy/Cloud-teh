@@ -1,5 +1,6 @@
-from fastapi import FastAPI
+﻿from fastapi import FastAPI
 from src.core import router as common_routes
+from src.storage import router as storage_routes
 
 app = FastAPI(
     title="Lab3 FastAPI Project",
@@ -8,3 +9,4 @@ app = FastAPI(
 )
 
 app.include_router(common_routes.router)
+app.include_router(storage_routes.router)
